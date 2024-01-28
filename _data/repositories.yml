@@ -1,12 +1,9 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - naughtont3
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - naughtont3/ompi
+  - open-mpi/ompi
+  - openpmix/openpmix
+  - openpmix/prrte
+
