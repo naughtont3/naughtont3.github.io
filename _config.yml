@@ -1,0 +1,22 @@
+# Setup
+title:               My Testing Lanyon Site
+description:         'A starter site using Lanyon theme.'
+url:                 http://naughtont3.github.io
+tagline:             'A Jekyll theme'
+baseurl:             ''
+paginate:            5
+permalink:           pretty
+
+# About/contact
+author:
+  name:              Thomas Naughton
+  url:               https://naughtont3.github.io
+  email:             naughtont@acm.org
+
+# Gems
+plugins:
+  - jekyll-paginate
+
+# Custom vars
+version:             1.1.0
+google_analytics_id: #UA-XXXX-Y
