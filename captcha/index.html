@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hCaptcha Redirect Demo</title>
+    <title>hCaptcha Token Redirect</title>
     <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
     <style>
         body {
@@ -27,7 +27,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>hCaptcha Redirect Demo</h1>
+        <h1>hCaptcha Token Redirect Demo</h1>
         <p>Please complete the CAPTCHA to proceed.</p>
         <form id="captcha-form">
             <div class="h-captcha" data-sitekey="38bcb676-97d2-471a-8dee-782435a86a72"></div>
@@ -42,16 +42,18 @@
         const messageDiv = document.getElementById('message');
 
         form.addEventListener('submit', (e) => {
-            e.preventDefault(); // Prevent the form from submitting traditionally
+            e.preventDefault(); // Prevent traditional form submission
 
-            // Simulate successful CAPTCHA validation (normally handled on the backend)
-            const hCaptchaResponse = hcaptcha.getResponse(); // Fetch the hCaptcha token
-
+            // Simulate CAPTCHA validation
+            const hCaptchaResponse = hcaptcha.getResponse();
             if (hCaptchaResponse) {
-                // If CAPTCHA is successfully completed, redirect
-                window.location.href = "success.html"; // Replace with your desired URL
+                // Generate a unique token
+                const token = btoa(Date.now() + Math.random().toString()).substring(0, 16);
+
+                // Redirect to success.html with token as a query parameter
+                window.location.href = `success.html?auth=${token}`;
             } else {
-                // Show an error if CAPTCHA is not completed
+                // Display an error if CAPTCHA isn't completed
                 messageDiv.textContent = "Please complete the CAPTCHA before proceeding.";
                 messageDiv.style.color = "red";
             }
