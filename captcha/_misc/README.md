@@ -63,7 +63,7 @@ Assumes initial setup (above) complete and just changing meeting data.
       using the same script (see: `encode.py -h`)
 
     ```
-      ./encode.py meetings.dat > meetings.dat.enc
+      ./_misc/encode.py meetings.dat > meetings.dat.enc
     ```
 
  3. Edit `success.html`, update `encodedData` with contents of encoded data
@@ -77,7 +77,8 @@ Assumes initial setup (above) complete and just changing meeting data.
 Misc
 ----
 
- - Encode script at `misc/encode.py`
- - Example HTML formatted meeting data at `misc/example.dat`
+ - The `_misc/` dir has leading underscore so Jekyll ignores it
+   when posting content to the statically generated gh-pages
+ - Encode script at `_misc/encode.py`
+ - Example HTML formatted meeting data at `_misc/example.dat`
 
-The `encode.py`
