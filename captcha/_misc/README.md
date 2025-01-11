@@ -28,8 +28,11 @@ General Flow
     the meeting information.
     - Note: We generate a simple token on captcha page (`index.html`) that
       is checked by the `success.html` page to try and avoid simple browsing
-      of the full URL.  This is a weak protection to again help obfuscate
-      the meeting info page.
+      of the full URL.  This is a weak protection to help obfuscate the
+      meeting info data.
+    - Note: We base64 encode the meeting content and embed the data into the
+      success page where it is displayed.  This is a weak protection to help
+      obfuscate the meeting info data.
 
  3. On failure, redirected to captcha challenge prompt.
 
