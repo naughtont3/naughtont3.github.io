@@ -22,7 +22,9 @@
 
         if (token) {
             // Decode the Base64 string
-            const encodedData = "SGVsbG8gTWVldGluZyBpbmZvClRoaXMgaXMgZmFrZSBkYXRhCgpodHRwczovL2JvZ3VzLm9yZy9saW5rMQoK";
+            const encodedData = "SGVsbG8gTWVldGluZyBpbmZvPGJyPgpUaGlzIGlzIGZha2UgZGF0YTxicj4KCjxicj4KPGJyPgo8YSBocmVmPSJodHRwczovL2JvZ3VzLm9yZy9saW5rMSI+aHR0cHM6Ly9ib2d1cy5vcmcvbGluazE8L2E+Cgo8cD5Nb3JlIGluZm8gaGVyZToKPHVsPgogICAgPGxpPkl0ZW0gb25lCiAgICA8bGk+SXRlbSB0d28KICAgIDxsaT5JdGVtIDxiPnRocmVlPC9iPgogICAgPGxpPkl0ZW0gPGk+Zm91cjwvaT4KPC91bD4KPC9wPgo=";
+
+
             const decodedData = atob(encodedData);
 
             // Token exists, display success message
